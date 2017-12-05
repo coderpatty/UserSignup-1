@@ -11,6 +11,8 @@ namespace UserSignup.ViewModels
         public string Email { get; set; }
         public string Password { get; set; }
         public int UserId { get; set; }
+        public string FavColor { get; internal set; }
+
         private static int nextId = 1;
 
         public User()

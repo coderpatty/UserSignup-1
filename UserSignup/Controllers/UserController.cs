@@ -5,9 +5,20 @@ namespace UserSignup.Controllers
 {
     public class UserController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int userId)
         {
-            return View();
+            if (userId == 0)
+            {
+                //User user = new User();
+                //return View(user);
+                return View();
+            } else
+            {
+
+                User user = UserData.GetById(userId);
+                return View(user);
+            }
+
         }
         
         public IActionResult Add()
@@ -23,7 +34,6 @@ namespace UserSignup.Controllers
 
             if (ModelState.IsValid)
             {
-                // Add the new cheese to my existing cheeses
                 user = new User ()
                 {
                     Username = addUserViewModel.Username,
@@ -33,11 +43,11 @@ namespace UserSignup.Controllers
 
                 UserData.Add(user);
 
-                //return View("Index", user);
+                return Redirect(string.Format("/Index?id={0}", user.UserId));
             }
 
 
-            return View("Index", user);
+            return View(addUserViewModel);
         }
 
 

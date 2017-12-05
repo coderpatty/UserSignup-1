@@ -1,3 +1,5 @@
-﻿@model UserSignup.ViewModels.AddUserViewModel
+﻿<!--//model UserSignup.ViewModels.AddUserViewModel-->
+@model User
 
-<h1>Welcome, @Model.Username</h1>
+@if (Model != null)
+{<h1>Welcome, @Model.Username</h1> }
