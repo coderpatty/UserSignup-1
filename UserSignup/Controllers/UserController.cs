@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UserSignup.Models;
+using UserSignup.ViewModels;
 
 namespace UserSignup.Controllers
 {
@@ -12,24 +12,35 @@ namespace UserSignup.Controllers
         
         public IActionResult Add()
         {
-            return View();
+            AddUserViewModel addUserViewModel = new AddUserViewModel();
+            return View(addUserViewModel);
         }
 
         [HttpPost]
-        public IActionResult Add(User user, string verify)
+        public IActionResult Add(AddUserViewModel addUserViewModel, User user)
         {
-            if (user.Password == null || !user.Password.Equals(verify))
-            {
-                ViewBag.username = user.Username;
-                ViewBag.email = user.Email;
-                ViewBag.message = "Passwords do not match";
+            if (user == null) user = new User();
 
-                return View();
+            if (ModelState.IsValid)
+            {
+                // Add the new cheese to my existing cheeses
+                user = new User ()
+                {
+                    Username = addUserViewModel.Username,
+                    Email = addUserViewModel.Email,
+                    Password = addUserViewModel.Password
+                };
+
+                UserData.Add(user);
+
+                //return View("Index", user);
             }
 
-            ViewBag.username = user.Username;
 
-            return View("Index");
+            return View("Index", user);
+        }
+
+
         }
     }
-}
+
