@@ -63,12 +63,6 @@ namespace UserSignup.Controllers
             return View("Details", user.UserId);
         }
 
-        public IActionResult Details(int id, User user)
-        {
-            if (user == null) {
-                user = UserData.GetById(id);
-            }
-            return View(user);
-        }
+
     }
 }
