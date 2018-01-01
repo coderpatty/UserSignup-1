@@ -1,31 +1,9 @@
 ﻿
-@{
-    ViewData["Title"] = "Index";
-}
-
 @model UserSignup.Models.User
 
-<h2>Index</h2>
-
-@if (String.IsNullOrEmpty(Model.Username))
+@if (Model.GetUser() != null)
 {
-    <p>Please <a asp-area="" asp-controller="User" asp-action="Add">Sign up</a>.</p>
-}
-else
-{
-    <p>Welcome, @Model.Username!</p>
-    <p>Hope you're having a @Model.FavColor</p>
+    <h2> Hello @Model.GetUser().username!</h2><br>
 }
 
-    @foreach (User user in UserData.GetAll())
-    {
-        <table>
-            <tr>
-                <td>
-               <a href="/User/Details?id=$@user.UserId" >@user.Username</a>
-                </td>
-            </tr>
-        </table>
-
-    }
-
+<a href="User/Add">User Form</a>

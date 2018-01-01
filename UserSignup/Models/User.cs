@@ -7,30 +7,24 @@ namespace UserSignup.Models
 {
     public class User
     {
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string FavColor { get; set; }
-        public int UserId { get; set; }
-        private static int nextId = 1;
-        public DateTime CreateDate;
+        public string username { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
 
-        public User ()
+        public User()
         {
-            UserId = nextId;
-            nextId++;
-            CreateDate = DateTime.Now;
         }
 
-        public User(string Username, string Email, string Password, string FavColor)
+        static private User staticUser;
+
+        public void SetUser(User user)
         {
-            this.Username = Username;
-            this.Email = Email;
-            this.Password = Password;
-            this.FavColor = FavColor;
-            UserId = nextId;
-            nextId++;
-            CreateDate = DateTime.Now;
+            staticUser = user;
+        }
+
+        public User GetUser()
+        {
+            return staticUser;
         }
     }
 }

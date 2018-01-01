@@ -1,40 +1,42 @@
 ﻿
+@model UserSignup.ViewModel.AddUserViewModel
+
 @{
     ViewData["Title"] = "Add";
 }
 
-@model UserSignup.Models.User
-
-
 <h2>Add</h2>
 
-<form method="post" action="Details">
-<span>@ViewBag.Errors</span>
+<form asp-controller="User" asp-action="Add" method="post">
 
-    <div class="form-element">
-        <label>UserName</label>
-        <input name="Username" value="@Model.Username" type="text" />
-    </div>
+    <label asp-for="name"></label>
+    <input asp-for="name"><br>
 
-    <div class="form-element">
-        <label>Email</label>
-        <input name="Email" value="@Model.Email" type="email" />
-    </div>
+    <label asp-for="email"></label>
+    <input asp-for="email"><br>
 
-    <div class="form-element">
-        <label>Password</label>
-        <input name="Password" value="@Model.Password" type="password" />
-    </div>
+    <label asp-for="password"></label>
+    <input asp-for="password" type="password"><br>
 
-    <div class="form-element">
-        <label>Verify Password</label>
-        <input name="verify" type="password" />
-    </div>
+    <label asp-for="verify"></label>
+    <input asp-for="verify" type="password"><br>
 
-    <div class="form-element">
-        <label>Favorite Color</label>
-        <input name="FavColor" type="text" value="@Model.FavColor" />
-    </div>
+    <input type="submit" value="Login">
 
-    <input type="submit" value="Submit" />
+<div class="form-element">
+    <label>Password</label>
+    <input name="Password" value="@Model.Password" type="password" />
+</div>
+
+<div class="form-element">
+    <label>Verify Password</label>
+    <input name="verify" type="password" />
+</div>
+
+<div class="form-element">
+    <label>Favorite Color</label>
+    <input name="FavColor" type="text" value="@Model.FavColor" />
+</div>
+
+<input type="submit" value="Submit" />
 </form>
