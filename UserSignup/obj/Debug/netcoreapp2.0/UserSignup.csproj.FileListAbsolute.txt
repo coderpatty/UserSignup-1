@@ -8,3 +8,14 @@ C:\Users\Gail Fike\lc101\unit3\c#\UserSignup\UserSignup\obj\Debug\netcoreapp2.0\
 C:\Users\Gail Fike\lc101\unit3\c#\UserSignup\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.pdb
 C:\Users\Gail Fike\lc101\unit3\c#\UserSignup\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.dll
 C:\Users\Gail Fike\lc101\unit3\c#\UserSignup\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.pdb
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.deps.json
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.runtimeconfig.json
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.runtimeconfig.dev.json
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.dll
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.pdb
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.csprojResolveAssemblyReference.cache
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.csproj.CoreCompileInputs.cache
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.AssemblyInfoInputs.cache
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.AssemblyInfo.cs
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.dll
+C:\vsts-coderpatty\lc101\UserSignup-1\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.pdb
